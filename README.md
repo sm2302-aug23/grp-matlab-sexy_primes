@@ -9,3 +9,15 @@ Understand the sample code given in the [`Group2-2023.pdf`](Group2-2023.pdf) doc
 
 Read [`notes.md`](notes.md) for some advice on good MATLAB programming style and marking scheme.
 
+# Spline Your Name
+
+Input:
+```matlab
+x_1 = [1.2 1.95 2 1.2 0.7 1 1.2 1.3 1.8 1.6 1.8 2.1 ...
+       2.3 2.5 2.55 2.3 2.2 2.2 2.3 2.4 2.2 1.8 1.8 2.4 2.9];
+y_1 = [1.8 2.5 3 1.8 0.6 1 1.8 1.3 1.8 1.5 1.3 1.6 ...
+       1.8 1.75 1.5 1.3 1.26 1.32 1.3 1.1 0.6 0.4 0.8 1.1 1.6];
+```
+
+Output:
+![plots](plots.png)
