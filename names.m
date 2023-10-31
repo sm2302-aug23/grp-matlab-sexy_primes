@@ -14,7 +14,7 @@ t_1 = 0:n_1-1;
 tt_1 = 0:0.01:n_1-1;
 
 xx_1 = spline(t_1, x_1, tt_1);
-yy_2 = spline(t_1, y_1, tt_1);
+yy_1 = spline(t_1, y_1, tt_1);
 
 % data points 2
 
@@ -30,7 +30,7 @@ yy_2 = spline(t_1, y_1, tt_1);
 figure(1)
 
 % subplot 1
-subplot(2,2,1), plot(xx_1, yy_2, 'k') % plot spline
+subplot(2,2,1), plot(xx_1, yy_1, 'k') % plot spline
 hold on
 plot(x_1, y_1, 'bo') % plot data points
 axis([0 3.5 0 3.5])
