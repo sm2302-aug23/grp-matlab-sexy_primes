@@ -29,13 +29,15 @@ tt_2 = 0:0.01:n_2-1;
 xx_2 = spline(t_2, x_2, tt_2);
 yy_2 = spline(t_2, y_2, tt_2);
 
-% data points 3 'nic'
-x_3 = [2 2.1 2.0 2 2.3 2.3 2.2 2.5];
-y_3 = [3 3.3 2.8 2.5 3.3 3 2.5 2.7];
+% data points 3 'Nic'
+x_3 = [0.3 0.5 1.3 1.3 1.3 1.3 2.1 2 1.8 2 ...
+    2.2 2 2 2.5 2.8 3 3 2.8 2.5 2.5 3];
+y_3 = [1.3 1 3 3 1 1 3 3 2 1.5 ...
+    2 1.5 1 1.75 2 1.75 1.75 2 1.75 1.1 1];
 
 n_3 = length(x_3);
-t_3 = 0:n_2-1;
-tt_3 = 0:0.01:n_2-1;
+t_3 = 0:n_3-1;
+tt_3 = 0:0.01:n_3-1;
 
 xx_3 = spline(t_3, x_3, tt_3);
 yy_3 = spline(t_3, y_3, tt_3);
@@ -71,8 +73,8 @@ grid on
 subplot(2,2,3), plot(xx_3, yy_3, 'k') % plot spline
 hold on
 plot(x_3, y_3, 'bo') % plot data points
-axis([0 3.5 0 3.5])
-title('Spline Interpolation of Cursive Word nic')
+axis([0 3.5 0.5 3.5])
+title('Spline Interpolation of Cursive Word Nic')
 xlabel('x')
 ylabel('y')
 grid on
