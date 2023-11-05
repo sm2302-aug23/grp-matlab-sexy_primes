@@ -33,4 +33,4 @@ y_3 = [1.3 1 3 3 1 1 3 3 2 1.5 ...
 ```
 
 Output:
-![plots](plots.png)
+![plots](plots2.png)
