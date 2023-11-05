@@ -16,7 +16,7 @@ hold on
 plot(x, y, 'bo', 'MarkerFaceColor', 'b') % plot data points
 axis([0 2.5 -1 3])
 grid on
-title('Spline Interpolation of Cursive Letter D')
+title('Spline Interpolation of Cursive Letter g')
 xlabel('x')
 ylabel('y')
 set(gca, 'FontSize', 10, 'LineWidth', 1)
