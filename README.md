@@ -40,4 +40,4 @@ y_4 = [1 1.5 0.5 0.3 1 0.4 0.4 1 ...
 ```
 
 Output:
-![plots](plots2.png)
+![plots](plots_update.png)
