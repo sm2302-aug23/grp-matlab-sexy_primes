@@ -43,7 +43,17 @@ xx_3 = spline(t_3, x_3, tt_3);
 yy_3 = spline(t_3, y_3, tt_3);
 
 % data points 4
+x_4 = [1.4 1 0.5 1 1.4 1.3 1.5 1.8 ...
+    1.9 2.2 2.2 1.9 1.8 1.9 2.2];
+y_4 = [1 1.5 0.5 0.3 1 0.4 0.4 1 ...
+    1 1.8 2.2 1.2 0.5 0.2 1];
 
+n_4 = length(x_4);
+t_4 = 0:n_4-1;
+tt_4 = 0:0.01:n_4-1;
+
+xx_4 = spline(t_4, x_4, tt_4);
+yy_4 = spline(t_4, y_4, tt_4);
 
 
 % Plot settings -----------------------------------------------------------
@@ -80,3 +90,13 @@ ylabel('y')
 grid on
 
 % subplot 4
+subplot(2,2,4), plot(xx_4, yy_4, 'k') % plot spline
+hold on
+plot(x_4, y_4, 'bo') % plot data points
+axis([0 3 -0.3 3])
+title('Spline Interpolation of Cursive Word al')
+xlabel('x')
+ylabel('y')
+grid on
+
+
