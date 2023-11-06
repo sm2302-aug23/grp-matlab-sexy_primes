@@ -138,7 +138,7 @@ spacing = 0.8; %adjustable
     figure(1)
     plot(x_word, y_word, 'k') % plot spline
     grid on
-    title('Spline Interpolation of Cursive Letter %word')
+    title('Spline Interpolation of Cursive Word')
     xlabel('x')
     ylabel('y')
 end
