@@ -1,5 +1,5 @@
-x = [0.5 0.7 0.6 1 1 1.5];
-y = [1 2 1.8 1.5 0.5 1];
+x = [0.5 0.85 0.7 0.8 1.1 1.1 1.5];
+y = [1 1.4 1.35 1.2 1.2 0.7 1];
 
 n = length(x);
 t = 0:n-1; % Parametric coordinate t
@@ -14,7 +14,7 @@ figure(1)
 plot(xx, yy, 'k', 'LineWidth', 2) % plot spline
 hold on
 plot(x, y, 'bo', 'MarkerFaceColor', 'b') % plot data points
-axis([0 2.5 -1 3])
+axis([0 2 -1 2])
 grid on
 title('Spline Interpolation of Cursive Letter r')
 xlabel('x')
