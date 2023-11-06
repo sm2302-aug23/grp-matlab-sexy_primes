@@ -28,8 +28,8 @@ y_g = [1 1.5 1.4 1.5 1.1 0.9 1.1 1.4 0.3 -0.5 0 0.6 1];
 x_h = [0.5 1.2 1.2 0.9 0.8 0.85 1 1.25 1.25 1.3 1.5];
 y_h = [1 1.8 2.2 1.2 0.5 0.2 0.9 0.9 0.25 0.25 1];
 
-x_i = [0.5 0.9 0.8 0.9 1.5];
-y_i = [1 1.2 0.5 0.2 1];
+x_i = [0.5 1 1 1 1.2 1.5];
+y_i = [1 1.2 1.5 0.5 0.2 1];
 
 x_j = [0.5 1 1.15 1 0.8 0.8 1.1 1.5];
 y_j = [1 1 1.2 -0.5 -0.8 -0.5 0 1];
@@ -136,7 +136,7 @@ spacing = 1;
 
     %plot
     figure(1)
-    plot(x_word, y_word, 'k') % plot spline
+    plot(x_word, y_word, 'k', 'LineWidth', 1.5) % plot spline
     grid on
     title('Spline Interpolation of Cursive Word')
     xlabel('x')
