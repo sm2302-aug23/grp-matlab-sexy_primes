@@ -1,13 +1,13 @@
-x = [0.5 1 ];
-y = [1 2.2];
+x = [0.5 1 0.8 0.7 1 0.65 0.6 1.2];
+y = [1 2.2 1.8 0.2 0.5 1.2 1 1];
 
 n = length(x);
-s = 0:n-1; % Parametric coordinate s
-ss = 0:0.01:n-1; % More dense coordinate ss for spline interpolation
+t = 0:n-1; % Parametric coordinate t
+tt = 0:0.01:n-1; % More dense coordinate tt for spline interpolation
 
 % Compute spline interpolation
-xx = spline(s, x, ss);
-yy = spline(s, y, ss);
+xx = spline(t, x, tt);
+yy = spline(t, y, tt);
 
 % Plot settings
 figure(1)
