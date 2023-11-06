@@ -136,7 +136,7 @@ spacing = 1;
 
     %plot
     figure(1)
-    plot(x_word, y_word, 'k') % plot spline
+    plot(x_word, y_word, 'k', 'LineWidth', 1.5) % plot spline
     grid on
     title('Spline Interpolation of Cursive Word')
     xlabel('x')
