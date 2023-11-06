@@ -1,9 +1,10 @@
 function plotWord(word)
-%initializing final coords
+
+% initializing final coords
 x_word = [];
 y_word = [];
 
-%creating alphabet_coordinates
+% creating alphabet_coordinates
 x_a = [0.5 0.75 1 1.3 1 0.5 1 1.3 1.3 1.5];
 y_a = [1 1.5 1.5 1 1.5 0.5 0.3 1 0.4 1];
 
@@ -36,8 +37,6 @@ y_j = [1 1 1.2 -0.5 -0.8 -0.5 0 1];
 
 x_k = [0.5 1.2 1.2 0.9 0.8 0.85 1 1.25 1.15 1 1.25 1.5];
 y_k = [1 1.8 2.2 1.2 0.5 0.2 0.9 0.9 0.7 0.6 0.2 1];
-
-
 
 x_l = [0.5 0.9 1.2 1.2 0.9 0.8 0.9 1.5];
 y_l = [1 1 1.8 2.2 1.2 0.5 0.2 1];
@@ -84,8 +83,7 @@ y_y = [1 1.1 0.6 0.7 1.2 -0.2 -0.4 0.1 0.4 1];
 x_z = [0.5 1.05 0.9 0.9 1.1 0.7 0.7 1 1.5];
 y_z = [1 1.1 0.6 0.7 0 -0.5 0.1 0.4 1];
 
-
-%initialise a cell array for alphabet_coordinates
+% initialise a cell array for alphabet_coordinates
 alphabet_coordinates = cell(1, 26);
 
 x = {x_a, x_b, x_c, x_d, x_e, x_f, x_g, x_h, x_i, x_j, x_k, x_l, x_m, ...
@@ -97,49 +95,49 @@ for letter = 1:26
     alphabet_coordinates{letter} = {x{letter}, y{letter}};
 end
 
-%convert word to lower case
+% convert word to lower case
 word = lower(word);
 
-%define letter spacing
+% define letter spacing
 spacing = 1;
 
-    %iterating through each letter
+    % iterating through each letter
     for i = 1:length(word)
         letter = word(i);
 
-        %check if all characters in the word are letters
+        % check if all characters in the word are letters
         if (~isletter(letter) || ~ischar(letter))
             error('The word contains characters that are not letters.')
         end
 
-        %double(letter) converts the letter to ASCII
-        %lowercase a-z have decimal values from 97-122
-        %subtracting 96 so a corresponds to 1 and so on
+        % double(letter) converts the letter to ASCII
+        % lowercase a-z have decimal values from 97-122
+        % subtracting 96 so a corresponds to 1 and so on
         index = double(letter) - 96;
 
-        %extract letter coordinates
+        % extract letter coordinates
         letter_coords = alphabet_coordinates{index};
         x = letter_coords{1};
         y = letter_coords{2};
 
-        %adjust x coords to account for letter spacing
+        % adjust x coords to account for letter spacing
         x = x + (i-1)*spacing;
 
-        %interpolation
+        % interpolation
         n = length(x);
         t = 0:n-1;
         tt = 0:0.01:n-1;
         xx = spline(t, x, tt);
         yy = spline(t, y, tt);
 
-        %add coords to the final word
+        % add coords to the final word
         x_word = [x_word, xx];
         y_word = [y_word, yy];
     end
 
-    %plot
-    figure(1)
-    plot(x_word, y_word, 'k', 'LineWidth', 1.5) % plot spline
+    % plot
+    figure(2)
+    plot(x_word, y_word, 'k', 'LineWidth', 2) % plot spline
     grid on
     title('Spline Interpolation of Cursive Word')
     xlabel('x')
