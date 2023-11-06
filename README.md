@@ -1,11 +1,11 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/i8q0vJZ5)
 # Spline Your Name
 
-# Task 1 & 2: Cursive Names Coordinates and Plotting
+## Task 1 & 2: Cursive Names Coordinates and Plotting
 
-This script contains the coordinates and code for plotting cursive names.
+These scripts contain the coordinates and code for plotting cursive names.
 
-## Data Points of X and Y Coordinates:
+### Data Points of X and Y Coordinates:
 
 ```matlab
 % data points 1 'fiz'
@@ -62,9 +62,9 @@ yy_4 = spline(t_4, y_4, tt_4);
     
 ```
 
-## Plot Settings
+### Plot Settings
 
-The script creates four subplots, each displaying a cursive word's spline interpolation and data points:
+The code below creates four subplots, each displaying a cursive word's spline interpolation and data points:
 
 - 'fiz'
 - 'Ja'
@@ -117,5 +117,5 @@ ylabel('y')
 grid on
 ```
 
-## Output:
+### Output:
 ![plots](plots_final.png)
