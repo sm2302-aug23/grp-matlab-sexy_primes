@@ -1,13 +1,13 @@
-x = [0.5 0.7 0.6 1 1 1.5];
-y = [1 2 1.8 1.5 0.5 1];
+x = [0.5 1 ];
+y = [1 2.2];
 
 n = length(x);
-t = 0:n-1; % Parametric coordinate t
-tt = 0:0.01:n-1; % More dense coordinate tt for spline interpolation
+s = 0:n-1; % Parametric coordinate s
+ss = 0:0.01:n-1; % More dense coordinate ss for spline interpolation
 
 % Compute spline interpolation
-xx = spline(t, x, tt);
-yy = spline(t, y, tt);
+xx = spline(s, x, ss);
+yy = spline(s, y, ss);
 
 % Plot settings
 figure(1)
@@ -16,7 +16,7 @@ hold on
 plot(x, y, 'bo', 'MarkerFaceColor', 'b') % plot data points
 axis([0 2.5 -1 3])
 grid on
-title('Spline Interpolation of Cursive Letter r')
+title('Spline Interpolation of Cursive Letter t')
 xlabel('x')
 ylabel('y')
 set(gca, 'FontSize', 10, 'LineWidth', 1)
