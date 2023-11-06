@@ -1,5 +1,5 @@
-x = [0.7 1.4 0.8 0.7 1.25 1.8];
-y = [1 1.5 1.2 0.2 0.2 1];
+x = [0.5 1.3 1.2 0.8 0.7 1.1 1.5];
+y = [1 1.2 1.4 1.2 0.2 0.2 1];
 
 n = length(x);
 t = 0:n-1; % Parametric coordinate t
@@ -10,7 +10,7 @@ xx = spline(t, x, tt);
 yy = spline(t, y, tt);
 
 % Plot settings
-figure(1)
+figure(2)
 plot(xx, yy, 'k', 'LineWidth', 2) % plot spline
 hold on
 plot(x, y, 'bo', 'MarkerFaceColor', 'b') % plot data points
