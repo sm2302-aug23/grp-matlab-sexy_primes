@@ -119,3 +119,19 @@ grid on
 
 ### Output:
 ![plots](plots_final.png)
+
+## Task 3: Word Combination & Function Scripting
+
+In this task, we developed a method to combine individual letters into words. 
+We created a function script, 'plotWord.m,' that takes a non-spaced string as input and generates the corresponding cursive-written word(s).
+To accomplish this, it was necessary to record the x and y coordinates for each individual letter. This data forms the basis for generating cursive words.
+
+The function automatically converts the input string to lowercase for consistent output.
+
+### Input:
+```matlab
+plotWord('HelloWorld')
+```
+
+### Output:
+![helloworld](helloworld.png)
